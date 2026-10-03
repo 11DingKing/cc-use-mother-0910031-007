@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "product": "积分结转到期治理",
+  "source_context": "当前 GitHub 账号内通过正式容器验证的 Python 后端项目群",
+  "actors": [
+    "企业申报员",
+    "核算专员",
+    "交易运营员",
+    "监管审计员"
+  ],
+  "states": [
+    "草稿",
+    "待核算",
+    "已确认",
+    "执行中",
+    "已封存"
+  ],
+  "invariants": [
+    "批次化余额",
+    "确定性扣减顺序",
+    "可注入到期时钟",
+    "消费分配追溯"
+  ],
+  "sample_cases": [
+    {
+      "case_id": "0910031-007-A",
+      "actor": "企业申报员",
+      "state": "草稿"
+    },
+    {
+      "case_id": "0910031-007-B",
+      "actor": "监管审计员",
+      "state": "待核算"
+    }
+  ],
+  "tags": [
+    "credit-expiry",
+    "lot-accounting"
+  ]
+}
