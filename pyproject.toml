@@ -1,6 +1,14 @@
 [project]
 name = "domain-contract-0910031-007"
-version = "0.1.0"
-description = "积分结转到期治理的领域约定与校验工具"
+version = "0.2.0"
+description = "积分结转到期治理的领域约定、校验工具与服务端实现"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "fastapi>=0.100",
+    "uvicorn[standard]>=0.23",
+]
+
+[project.optional-dependencies]
+dev = [
+    "httpx>=0.24",
+]
