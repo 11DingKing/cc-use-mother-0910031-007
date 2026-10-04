@@ -1,6 +1,15 @@
 [project]
 name = "domain-contract-0910031-007"
-version = "0.1.0"
-description = "积分结转到期治理的领域约定与校验工具"
+version = "0.2.0"
+description = "积分结转到期治理：批次化余额、FEFO 确定性扣减、可注入到期时钟与消费分配追溯"
 requires-python = ">=3.11"
 dependencies = []
+
+[project.scripts]
+points-governance = "points_governance.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
